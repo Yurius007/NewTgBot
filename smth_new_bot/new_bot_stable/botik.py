@@ -44,7 +44,7 @@ def start(message):
         global users_list
         users_list = [message.chat.id]
         print(f"current user_id is: {user_id}")
-        botik.send_message(message.chat.id, f'Ваш ID: {user_id}' + '\nКапець, сам в шокі но я бота зробив.\nвахуі пон\n/nickname [нік] - міняє ваш нік\n/find [айді] - показує профіль гравця по айді\n/delete - видаляє ваш акк разом з ніком і айді\n(якшо захочете зарегатися знов перезапустіть бота)\n/profile - показує всі ваші данні')
+        botik.send_message(message.chat.id, f'Ваш ID: {user_id}' + '\nКапець, сам в шокі но я бота зробив.\nніпон пон\n/nickname [нік] - міняє ваш нік\n/find [айді] - показує профіль гравця по айді\n/delete - видаляє ваш акк разом з ніком і айді\n(якшо захочете зарегатися знов перезапустіть бота)\n/profile - показує всі ваші данні')
         cursor.execute("INSERT INTO users (personal_id) VALUES(?)", [user_id])
         connect.commit()
     else:
